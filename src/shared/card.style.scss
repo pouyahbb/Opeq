@@ -1,0 +1,29 @@
+.card {
+	width: 30%;
+
+	&__food {
+		&--type {
+			color: rgb(2, 103, 100);
+			font-style: italic;
+			font-weight: normal;
+			letter-spacing: 1px;
+			margin-top: 0;
+			border-bottom: 1px solid #eaeaea;
+		}
+
+		&--location {
+			color: #696969;
+		}
+		&--timeToReady {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 1rem;
+    font-weight: bolder;
+	}
+}
