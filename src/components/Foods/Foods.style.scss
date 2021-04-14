@@ -1,0 +1,10 @@
+.foods{
+  margin : 4rem;
+
+  &__lunchAndDinner {
+    h3{
+      border-bottom: 1px solid #3333;
+      padding-bottom: 1rem;
+    }
+  }
+}

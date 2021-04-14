@@ -1,12 +1,13 @@
 import NavBar from './components/navBar/navBar'
-// import { Router , Switch , Route } from 'react-router-dom'
+import Foods from './components/Foods/Foods'
 
 function App() {
-  return (
-    <div>
-      <NavBar />
-    </div>
-  );
+	return (
+		<div>
+			<NavBar />
+			<Foods />
+		</div>
+	)
 }
 
-export default App;
+export default App

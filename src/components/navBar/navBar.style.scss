@@ -1,15 +1,16 @@
-.navbar{
- 
-  &__typography{
-    display:flex;
-    justify-content: space-between;
-  }
-  button{
-    text-transform: capitalize;
-    margin : .5rem
-  }
+.navbar {
+	&__typography {
+		position: fixed !important;
+		display: flex;
+		justify-content: space-between;
+		width: 95%;
+	}
+	button {
+		text-transform: capitalize;
+		margin: 0.5rem;
+	}
 
-  header{
-    background-color: rgb(255, 210, 0)
-  }
+	header {
+		// background-color: rgb(255, 210, 0);
+	}
 }
