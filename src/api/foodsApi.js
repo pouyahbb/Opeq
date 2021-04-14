@@ -142,6 +142,108 @@ const FoodsApi = [
 			},
 		],
 	},
+	{
+		name: 'Breakfast',
+		data: [
+			{
+				id: 'B1',
+				foodName: 'Eggs Benedict',
+				image: 'https://cdn.opeqe.com/image/menu/s/14.jpg',
+				type: 'à la carte',
+				location: 'AmericanMain CourseBreakfast',
+				timeToReady: '5-9',
+				price: '13.65',
+			},
+			{
+				id: 'B2',
+				foodName: 'Cinnamon Roll Pancake',
+				image: 'https://cdn.opeqe.com/image/menu/s/13.jpg',
+				type: 'Cinnamon roll pancake',
+				location: 'AmericaMain CourseBreakfast',
+				timeToReady: '5-7',
+				price: '11.45',
+			},
+			{
+				id: 'B3',
+				foodName: 'My Hammy & Cheese Omelette',
+				image: 'https://cdn.opeqe.com/image/menu/s/7.jpg',
+				location: 'America Main Course Breakfast',
+				type: 'Cinnamon roll pancake',
+				timeToReady: '15-22',
+				price: '15.21',
+			},
+		],
+	},
+	{
+		name: 'Salad',
+		data: [
+			{
+				id: 'S1',
+				foodName: 'Chopped Salad',
+				image:
+					'https://cdn.opeqe.com/image/menu/s/3b9a57ce-e633-4175-6a5d-08d75451a565.jpg',
+				location: 'American . Appetizer . Lunch & Dinner',
+				timeToReady: '5-7',
+				price: '12.21',
+				type: 'Salad',
+			},
+			{
+				id: 'S2',
+				foodName: 'Kale Salad',
+				image:
+					'https://cdn.opeqe.com/image/menu/s/f9c1f8bb-432b-495e-6a5f-08d75451a565.jpg',
+				location: 'American . Appetizer . Lunch & Dinner',
+				timeToReady: '5-7',
+				price: '6.21',
+				type: 'Salad',
+			},
+			{
+				id: 'S3',
+				foodName: 'Greek Salad',
+				image:
+					'https://cdn.opeqe.com/image/menu/s/3af24fad-c5ca-44f4-6a60-08d75451a565.jpg',
+				location: 'American . Appetizer . Lunch & Dinner',
+				timeToReady: '9-13',
+				price: '16.21',
+				type: 'Salad',
+			},
+			{
+				id: 'S3',
+				foodName: 'Roasted Chicken Salad',
+				image:
+					'https://cdn.opeqe.com/image/menu/s/ed8b6b3b-9d2b-4ff5-6a5e-08d75451a565.jpg',
+				location: 'American . Appetizer . Lunch & Dinner',
+				timeToReady: '7-10',
+				price: '19.81',
+				type: 'Salad',
+			},
+		],
+	},
+	{
+		name: 'Soup',
+		data: [
+			{
+				id: 'SO1',
+				foodName: 'Chicken Soup',
+				image:
+					'https://cdn.opeqe.com/image/menu/s/f1d00e37-dc3f-4ac5-6a62-08d75451a565.jpg',
+				location: 'American . Appetizer . Lunch & Dinner',
+				timeToReady: '7-10',
+				price: '19.81',
+				type: 'Soup',
+			},
+			{
+				id: 'SO2',
+				foodName: 'Creamy Chicken Soup',
+				image:
+					'https://cdn.opeqe.com/image/menu/s/dc8afebc-5043-4ee6-6a68-08d75451a565.jpg',
+				location: 'American . Appetizer . Lunch & Dinner',
+				timeToReady: '10-15',
+				price: '10.81',
+				type: 'Soup',
+			},
+		],
+	},
 ]
 
 export default FoodsApi

@@ -8,7 +8,9 @@ function Mexican() {
 	return (
 		<div>
 			<h3> Mexican </h3>
-			<Card foodName='Mexican' />
+			<div className='foods__card'>
+				<Card foodName='Mexican' />
+			</div>
 		</div>
 	)
 }
