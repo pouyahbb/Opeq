@@ -1,0 +1,15 @@
+.navbar{
+ 
+  &__typography{
+    display:flex;
+    justify-content: space-between;
+  }
+  button{
+    text-transform: capitalize;
+    margin : .5rem
+  }
+
+  header{
+    background-color: rgb(255, 210, 0)
+  }
+}
