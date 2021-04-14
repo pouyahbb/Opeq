@@ -1,9 +1,48 @@
+@media only screen and (max-width: 950px) {
+	.footer {
+    	img {
+			position: absolute;
+			z-index: 10;
+			bottom: 105.1%  !important;
+		}
+		&__body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+		&__footer {
+			&--companyInfo {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	.footer {
+		img {
+			position: absolute;
+			z-index: 10;
+			bottom: 106.2%  !important;
+		}
+		&__footer {
+			&--companyLeftSide {
+				font-size: 0.7rem;
+			}
+		}
+	}
+}
+
 .footer {
 	position: relative;
+	margin-top: 15rem;
 
 	img {
-		position: relative;
+		position: absolute;
 		z-index: 10;
+		bottom: 103.6%;
 	}
 
 	&__header {
@@ -59,6 +98,7 @@
 			width: 80%;
 			color: #ccc;
 			margin: 3rem auto;
+			line-height: 2rem;
 		}
 		&--companyInfo {
 			display: flex;
