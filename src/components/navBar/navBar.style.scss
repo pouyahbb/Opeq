@@ -4,7 +4,14 @@
 		display: flex;
 		justify-content: space-between;
 		width: 95%;
-		z-index : 100;
+		z-index: 100;
+
+		&--logo {
+			width: 170px;
+			height: 50px;
+			vertical-align: middle;
+			margin-left: 5rem;
+		}
 	}
 	button {
 		text-transform: capitalize;

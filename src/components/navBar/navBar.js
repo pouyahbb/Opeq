@@ -10,7 +10,7 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 
 import Logo from './../../assets/opeqe-logo.svg'
 import HeaderImage from './../../assets/HomeHeader.jpg'
-import './navBar.style.scss'
+import './Navbar.style.scss'
 
 export default function ButtonAppBar() {
 	// Make responsive when maxSize is 750px
@@ -18,13 +18,7 @@ export default function ButtonAppBar() {
 
 	// Change the backgrundColor of navBar when scrolling
 	const [changeColor , setChangeColor] = useState(false)
-	const listenScrollEvent = e => {
-		if(window.scrollY > 400){
-			setChangeColor(true)
-		}else{
-			setChangeColor(false)
-		}
-	}
+	const listenScrollEvent = () => setChangeColor(window.scrollY > 400)
 
 	useEffect(() => {
 		window.addEventListener('scroll' , listenScrollEvent)
@@ -35,7 +29,9 @@ export default function ButtonAppBar() {
 			{checkPageSize ? (
 				<AppBar position='static'>
 					<Toolbar
-						style={{ backgroundColor: changeColor ? '#eaeaea' : 'rgb(255, 210, 0)' }}
+						style={{
+							backgroundColor: changeColor ? '#eaeaea' : 'rgb(255, 210, 0)',
+						}}
 						className='navbar__typography'
 					>
 						<Typography variant='h6'>
@@ -49,33 +45,30 @@ export default function ButtonAppBar() {
 								}}
 							/>
 						</Typography>
-						<div>
+						<>
 							<Button style={{ fontSize: '.7rem' }} variant='outlined'>
 								Log In
 							</Button>
 							<IconButton style={{ color: '#000' }} className='navbar__icon'>
 								<ShoppingBasketIcon style={{ fontSize: '1.5rem' }} />
 							</IconButton>
-						</div>
+						</>
 					</Toolbar>
 					<img src={HeaderImage} alt='HomeHeader' />
 				</AppBar>
 			) : (
 				<AppBar position='sticky'>
 					<Toolbar
-						style={{ backgroundColor: changeColor ? '#eaeaea' : 'rgb(255, 210, 0)' }}
+						style={{
+							backgroundColor: changeColor ? '#eaeaea' : 'rgb(255, 210, 0)',
+						}}
 						className='navbar__typography'
 					>
 						<Typography variant='h6'>
 							<img
+								className='navbar__typography--logo'
 								src={Logo}
 								alt='Opeqe Logo'
-								style={{
-									width: '170px',
-									height: '50px',
-									verticalAlign: 'middle',
-									marginLeft: '5rem',
-								}}
 							/>
 						</Typography>
 						<div>

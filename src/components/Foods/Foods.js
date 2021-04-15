@@ -1,27 +1,19 @@
 import React from 'react'
 
-import LunchAndDinner from './lunchAndDinner'
-import Mexican from './mexican'
-import Pizza from './pizza'
-import Japanese from './Japanese'
-import Soup from './Soup'
-import Salad from './salad';
-import Breakfast from './Breakfast'
-
+import FoodCard from './FoodCard'
+import FoodsApi from './../../api/foodsApi'
 import './Foods.style.scss'
 
+const FoodTypes = FoodsApi.map((foodApi) => foodApi.name)
+
 function Foods() {
-  return (
-    <div className="foods">
-      <LunchAndDinner />
-      <Mexican />
-      <Japanese />
-      <Pizza />
-      <Breakfast />
-      <Salad />
-      <Soup />
-    </div>
-  )
+	return (
+		<div className='foods'>
+			{FoodTypes.map((foodType, index) => (
+				<FoodCard key={foodType + index} foodName={foodType} />
+			))}
+		</div>
+	)
 }
 
 export default Foods

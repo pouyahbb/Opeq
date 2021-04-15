@@ -1,58 +1,69 @@
 import React from 'react'
 
-import IconButton from '@material-ui/core/IconButton'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 
 import FooterImage from './../../assets/footerTop.svg'
-import './footer.style.scss'
+import './Footer.style.scss'
 
-function Footer() {
+const headerList = [
+	'About',
+	'Services',
+	'Support',
+	'Gallery',
+	'Terms',
+	'Locations',
+]
+
+const footerBody = {
+	menu: {
+		label: 'Main Menu',
+		items: ['Pickup', 'Delivery'],
+	},
+	orders: {
+		label: 'Orders',
+		items: ['Upcoming Orders', 'Recent Orders'],
+	},
+	profile: {
+		label: 'Profile',
+		items: ['Promos & Credits', 'Rewards'],
+	},
+	support: {
+		label: 'Support',
+		items: ['Contact Us', 'Live Chat'],
+	},
+}
+
+const socialIcons = [InstagramIcon, TwitterIcon, FacebookIcon, YouTubeIcon]
+export const Footer = () => {
 	return (
 		<div className='footer'>
 			<img src={FooterImage} alt='Footer' />
 			<div className='footer__content'>
 				<div className='footer__header'>
 					<ul className='footer__header--lists'>
-						<li className='footer__header--list'>About</li>
-						<li className='footer__header--list'>Services</li>
-						<li className='footer__header--list'>Support</li>
-						<li className='footer__header--list'>Gallery</li>
-						<li className='footer__header--list'>Terms</li>
-						<li className='footer__header--list'>Locations</li>
+						{headerList.map((header, idx) => (
+							<li className='footer__header--list' key={header + idx}>
+								{header}
+							</li>
+						))}
 					</ul>
 				</div>
 				<div className='footer__body'>
-					<div className='footer__body--menu'>
-						<ul className='footer__body--lists'>
-							<h4> Main Menu </h4>
-							<li className='footer__body--list'>Pickup</li>
-							<li className='footer__body--list'>Delivery</li>
-						</ul>
-					</div>
-					<div className='footer__body--orders'>
-						<ul className='footer__body--lists'>
-							<h4> Orders </h4>
-							<li className='footer__body--list'>Upcoming Orders</li>
-							<li className='footer__body--list'>Recent Orders</li>
-						</ul>
-					</div>
-					<div className='footer__body--profile'>
-						<ul className='footer__body--lists'>
-							<h4> Profile </h4>
-							<li className='footer__body--list'> Promos & Credits </li>
-							<li className='footer__body--list'>Rewards</li>
-						</ul>
-					</div>
-					<div className='footer__body--support'>
-						<ul className='footer__body--lists'>
-							<h4> Support </h4>
-							<li className='footer__body--list'> Contact Us </li>
-							<li className='footer__body--list'>Live Chat</li>
-						</ul>
-					</div>
+					{Object.entries(footerBody).map(([fbName, fb], idx) => (
+						<div className={`footer__body--${fbName}`} key={fbName + idx}>
+							<ul className='footer__body--lists'>
+								<h4> {fb.label} </h4>
+								{fb.items.map((item, index) => (
+									<li className='footer__body--list' key={item + index}>
+										{item}
+									</li>
+								))}
+							</ul>
+						</div>
+					))}
 				</div>
 				<div className='footer__footer'>
 					<p className='footer__footer--text'>
@@ -70,18 +81,11 @@ function Footer() {
 							</ul>
 						</div>
 						<div className='footer__footer--companyRightSide'>
-							<button className='footer__footer--companyRightSideBtn'>
-								<InstagramIcon />
-							</button>
-							<button className='footer__footer--companyRightSideBtn'>
-								<TwitterIcon />
-							</button>
-							<button className='footer__footer--companyRightSideBtn'>
-								<FacebookIcon />
-							</button>
-							<button className='footer__footer--companyRightSideBtn'>
-								<YouTubeIcon />
-							</button>
+							{socialIcons.map((Cmp , index) => (
+								<button key={index}  className='footer__footer--companyRightSideBtn'>
+									<Cmp />
+								</button>
+							))}						
 						</div>
 					</div>
 				</div>
